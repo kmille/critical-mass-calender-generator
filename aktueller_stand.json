@@ -1,12 +1,10 @@
 [
-    null,
     {
         "name": "osnabrueck.html",
         "url": "osnabrueck.html",
         "description": "",
         "urls": "https://www.facebook.com/criticalmassosnabrueck"
     },
-    null,
     {
         "name": "hildesheim.html",
         "url": "hildesheim.html",
@@ -54,7 +52,6 @@
         "url": "erlangen.html",
         "description": "Jeden zweiten Freitag"
     },
-    null,
     {
         "name": "dueren.html",
         "url": "dueren.html",
@@ -66,7 +63,6 @@
         "url": "bielefeld.html",
         "description": "19 Uhr, jeden letzten Freitag im Monat"
     },
-    null,
     {
         "name": "wolfenbuettel.html",
         "url": "wolfenbuettel.html",
@@ -102,7 +98,6 @@
         "description": "Immer am letzten Freitag im Monat um 18 Uhr.",
         "urls": "http://critical-mass-bayreuth.de/"
     },
-    null,
     {
         "name": "ulm.html",
         "url": "ulm.html",
@@ -115,21 +110,18 @@
         "description": "zweiter Freitag im Monat",
         "urls": "http://critical-mass-duesseldorf.de/\nhttp://criticalmassduesseldorf.blogsport.de/\n\n\n\nhttps://www.facebook.com/CriticalMassDuesseldorf\u200e"
     },
-    null,
     {
         "name": "saarbruecken.html",
         "url": "saarbruecken.html",
         "description": "",
         "urls": "http://www.critical-mass-saarbruecken.de/"
     },
-    null,
     {
         "name": "rendsburg.html",
         "url": "rendsburg.html",
         "description": "19:00 Uhr letzter Freitag im Monat",
         "urls": "https://www.facebook.com/CriticalMassRendsburg/"
     },
-    null,
     {
         "name": "wuppertal.html",
         "url": "wuppertal.html",
@@ -206,7 +198,6 @@
         "description": "am letzten Freitag im Monat.\nTreffpunkt ist 19 Uhr",
         "urls": "http://criticalmassbraunschweig.tumblr.com\n\n\n\nhttps://www.facebook.com/critical.mass.braunschweig\u200e"
     },
-    null,
     {
         "name": "schweinfurt.html",
         "url": "schweinfurt.html",
@@ -236,7 +227,6 @@
         "description": "Zeit: jeden 2. Freitag im Monat\nTreffpunkt: 18 Uhr am Brunnen vor der Residenz (siehe Homepage)",
         "urls": "www.cmwue.de\n\n\n\nhttps://www.facebook.com/Critical-Mass-W\u00fcrzburg-638967912866066"
     },
-    null,
     {
         "name": "muenster.html",
         "url": "muenster.html",
@@ -254,7 +244,6 @@
         "url": "wolfratshausen.html",
         "description": "jeden letzten Freitag im Monat um 17 Uhr\nleider auf Grund geringer Nachfrage pausiert."
     },
-    null,
     {
         "name": "fulda.html",
         "url": "fulda.html",
@@ -283,15 +272,12 @@
         "description": "jeden 3. Freitag im Monat 19:00 Uhr",
         "urls": "http://velolove.me/cmdo/\n\n\n\nhttps://de-de.facebook.com/pages/Critical-Mass-Dortmund/161748607183306"
     },
-    null,
-    null,
     {
         "name": "norderstedt.html",
         "url": "norderstedt.html",
         "description": "1. Freitag im Monat 19 Uhr\n\nEine Fahrradtour \nf\u00fcr eine lebenswert leise Stadt\n\n Die Radfahrer/-innen sind der Verkehr!\n\nIm gem\u00fctlichen Tempo ca. 2 Stunden \nsicher und entspannt in der Gruppe \nauf den Stra\u00dfen durch Norderstedt fahren",
         "urls": "http://www.adfc-norderstedt.de/3510.htm"
     },
-    null,
     {
         "name": "Herrenberg.html",
         "url": "Herrenberg.html",
@@ -345,25 +331,18 @@
         "description": "erster Sonntag im Monat, 14 Uhr, darauffolgender Freitag, 19 Uhr",
         "urls": "http://www.critical-mass-frankfurt.de/\u200e\n\n\n\nhttps://www.facebook.com/criticalmass.frankfurt"
     },
-    null,
     {
         "name": "freiburg-im-breisgau.html",
         "url": "freiburg-im-breisgau.html",
         "description": "letzter Freitag im Monat, 18 Uhr",
         "urls": "http://www.critical-mass-freiburg.de\n\n\n\nhttps://www.facebook.com/critical.mass.freiburg\u200e"
     },
-    null,
-    null,
-    null,
-    null,
-    null,
     {
         "name": "ludwigsburg.html",
         "url": "ludwigsburg.html",
         "description": "Auch in Ludwigsburg nimmt der motorisierte Verkehr zu, Radfahrer werden gerne \u00fcbersehen oder deren Rechte als Verkehrsteilnehmer beschnitten. Wir wollen f\u00fcr das Radfahren werben und auf den Radverkehr aufmerksam machen. Wir treffen uns zwanglos und unangemeldet immer am \n2. Freitag im Monat um 18 Uhr um auf den Stra\u00dfen durch unsere Stadt zu fahren.\n\nTreffpunkt: Imbiss am FORUM",
         "urls": "http://www.facebook.Com/CriticalMassLudwigsburg"
     },
-    null,
     {
         "name": "hannover.html",
         "url": "hannover.html",
@@ -481,7 +460,6 @@
         "description": "",
         "urls": "https://www.facebook.com/pages/Critical-Mass-Schwerte/255280468006045"
     },
-    null,
     {
         "name": "bremen.html",
         "url": "bremen.html",
@@ -506,8 +484,6 @@
         "description": "erster Freitag im Monat, 18 Uhr",
         "urls": "http://www.criticalmass-lueneburg.de\n\n\n\nhttps://www.facebook.com/CriticalMassLueneburg"
     },
-    null,
-    null,
     {
         "name": "augsburg.html",
         "url": "augsburg.html",
@@ -549,7 +525,6 @@
         "description": "Jeden letzten Freitag im Monat um um 18:00 Uhr.",
         "urls": "https://www.facebook.com/events/1689450711276132"
     },
-    null,
     {
         "name": "linz.html",
         "url": "linz.html",
@@ -586,8 +561,6 @@
         "description": "erster Freitag im Monat",
         "urls": "http://criticalmassflensburg.blogsport.de"
     },
-    null,
-    null,
     {
         "name": "wiesbaden.html",
         "url": "wiesbaden.html",

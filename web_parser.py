@@ -4,6 +4,8 @@ from ipdb import set_trace
 import re
 import os
 import json
+from datetime import datetime
+from dateutil.relativedelta import relativedelta, FR
 
 session = requests.Session()
 
@@ -54,8 +56,33 @@ def get_details(name, url):
 #cities = get_cities()
 #get_details('Darmstadt', 'erlangen.html')
 #exit()
-c = []
-for city in os.listdir("html/"):
-    #get_details(city['name'], city['url'])
-    c.append(get_details(city, city))
-print(json.dumps(c))
+def generate_json():
+    c = []
+    for city in os.listdir("html/"):
+        #get_details(city['name'], city['url'])
+        detail = get_details(city, city)
+        if detail:
+            c.append(detail)
+    print(json.dumps(c))
+
+def find_day(desc):
+    for i in range(5):
+        print(datetime.today()+ relativedelta(months=i))
+    print("")
+    for i in range(5):
+        print(datetime.today()+ relativedelta(months=i) + relativedelta(weekday=FR(-1)))
+    #return datetime.now() + relativedelta(weekday=FR(-1))
+
+def main():
+    critical_masses = json.load(open("aktueller_stand.json"))
+    for mass in critical_masses[1:]:
+        desc = mass['description']
+        print(desc)
+        date = find_day(desc)
+        print(date)
+        exit()
+
+
+
+if __name__ == '__main__':
+    main()

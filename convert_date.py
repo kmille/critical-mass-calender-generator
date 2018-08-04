@@ -32,11 +32,11 @@ def get_event(mass, cal=None):
         day = days[mass['day']]
         all_days_per_month = [week[day] for week in calendar.monthcalendar(year, month)]
         selected_day = all_days_per_month[mass['cycle']]
-        begin_str = '{:4d}-{:02d}-{:02d} {}:00'.format(year, month, selected_day, mass['begin'])
-        begin = arrow.get(begin_str, 'YYYY-MM-DD HH:mm:ss')
+        begin_str = '{:4d}-{:02d}-{:02d} {}:00 Europe/Berlin'.format(year, month, selected_day, mass['begin'])
+        begin = arrow.get(begin_str, 'YYYY-MM-DD HH:mm:ss ZZZ')
         end = begin.replace(hour=begin.hour+2)
         alarm = DisplayAlarm(description='Endlich wieder ' + mass['name'], 
-                             trigger=begin.replace(day=begin.day-4))
+                             trigger=begin.shift(days=-4))
         e = Event()
         e.name = mass['name'] 
         e.location = mass['location']

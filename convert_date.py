@@ -24,13 +24,14 @@ days = { 'Montag':     calendar.MONDAY,
          'Sunday':     calendar.SUNDAY,
 }
  
+
 def get_event(mass, cal=None):
     c = Calendar() if not cal else cal
     year = arrow.now().year
-    #for month in range(1, 13):
-    for month in range(1, 13)[7:8]:
+    for month in range(arrow.now().month, 13):
         day = days[mass['day']]
         all_days_per_month = [week[day] for week in calendar.monthcalendar(year, month)]
+        if all_days_per_month[0] == 0: all_days_per_month.pop(0)
         selected_day = all_days_per_month[mass['cycle']]
         begin_str = '{:4d}-{:02d}-{:02d} {}:00 Europe/Berlin'.format(year, month, selected_day, mass['begin'])
         begin = arrow.get(begin_str, 'YYYY-MM-DD HH:mm:ss ZZZ')
@@ -49,7 +50,7 @@ def get_event(mass, cal=None):
 
 events = json.load(open(json_file, "r"))
 cal = Calendar()
-__ = [get_event(event, cal) for event in events]
+[get_event(event, cal) for event in events]
 
 with open(ical_name, "w") as f:
     f.writelines(cal)

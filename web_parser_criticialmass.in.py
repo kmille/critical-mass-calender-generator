@@ -67,7 +67,7 @@ def get_cities():
             place = bs.findAll("dl")[2].find("dd").text
         except (AttributeError, IndexError):
             place = "" # no place found on the website
-        cities_result[name].update({'place': place})
+        cities_result[name].update({'location': place})
     print("Write data to {}".format(output_file))
     with open(output_file, "w") as f:
         json.dump(cities_result, f)

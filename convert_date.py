@@ -5,7 +5,8 @@ from ics import Calendar, Event
 from ics.alarm import DisplayAlarm
 from ipdb import set_trace
 
-json_file = "cm.json"
+#json_file = "cm.json"
+json_file = "cities.json"
 ical_name = "cm.ics"
 
 days = { 'Montag':     calendar.MONDAY,
@@ -25,32 +26,36 @@ days = { 'Montag':     calendar.MONDAY,
 }
  
 
-def get_event(mass, cal=None):
+def get_event(name, infos, cal=None):
     c = Calendar() if not cal else cal
     year = arrow.now().year
     for month in range(arrow.now().month, 13):
-        day = days[mass['day']]
+        day = days[infos['day']]
         all_days_per_month = [week[day] for week in calendar.monthcalendar(year, month)]
         if all_days_per_month[0] == 0: all_days_per_month.pop(0)
-        selected_day = all_days_per_month[mass['cycle']]
-        begin_str = '{:4d}-{:02d}-{:02d} {}:00 Europe/Berlin'.format(year, month, selected_day, mass['begin'])
+        selected_day = all_days_per_month[infos['cycle']]
+        begin_str = '{:4d}-{:02d}-{:02d} {}:00 Europe/Berlin'.format(year, month, selected_day, infos['begin'])
         begin = arrow.get(begin_str, 'YYYY-MM-DD HH:mm:ss ZZZ')
         end = begin.replace(hour=begin.hour+2)
-        alarm = DisplayAlarm(description='Endlich wieder ' + mass['name'], 
+        alarm = DisplayAlarm(description='Endlich wieder ' + name,
                              trigger=begin.shift(days=-4))
         e = Event()
-        e.name = mass['name'] 
-        e.location = mass['location']
+        e.name = name
+        e.location = infos['location']
         e.begin = begin
         e.end = end
-        e.description = "\n".join(mass['urls'])
+        e.description = "\n".join(infos.get('url', []))
         e.alarms = (alarm, )
         c.events.add(e)
+    print("Done with {}".format(name))
     return c
 
 events = json.load(open(json_file, "r"))
 cal = Calendar()
-[get_event(event, cal) for event in events]
+for name, infos in events.items():
+    if name in ("Würzburg", "Darmstadt"):
+        get_event(name, infos, cal)
+#[get_event(event, cal) for event in events]
 
 with open(ical_name, "w") as f:
     f.writelines(cal)

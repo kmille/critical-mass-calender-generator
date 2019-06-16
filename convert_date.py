@@ -40,11 +40,11 @@ def get_event(name, infos, cal=None):
         alarm = DisplayAlarm(description='Endlich wieder ' + name,
                              trigger=begin.shift(days=-4))
         e = Event()
-        e.name = name
+        e.name = "Critical Mass " + name
         e.location = infos['location']
         e.begin = begin
         e.end = end
-        e.description = "\n".join(infos.get('url', []))
+        e.description = infos.get('url', "")
         e.alarms = (alarm, )
         c.events.add(e)
     print("Done with {}".format(name))
